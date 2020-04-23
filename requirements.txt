@@ -3,7 +3,10 @@ certifi==2020.4.5.1
 chardet==3.0.4
 click==7.1.1
 dialogflow==0.8.0
+dnspython==1.16.0
 Flask==1.1.2
+Flask-MongoAlchemy==0.7.2
+Flask-PyMongo==2.3.0
 google-api-core==1.17.0
 google-auth==1.14.0
 googleapis-common-protos==1.51.0
@@ -13,10 +16,12 @@ idna==2.9
 itsdangerous==1.1.0
 Jinja2==2.11.2
 MarkupSafe==1.1.1
+MongoAlchemy==0.19
 protobuf==3.11.3
 pyasn1==0.4.8
 pyasn1-modules==0.2.8
 PyJWT==1.7.1
+pymongo==3.10.1
 pytz==2019.3
 requests==2.23.0
 rsa==4.0
