@@ -16,13 +16,14 @@ def reply_with_recipe_info():
 	print('Message sent', rcvd_msg)
 
 	if 'Hi' in rcvd_msg or 'Hey' in rcvd_msg or 'hey' in rcvd_msg or 'hi' in rcvd_msg or 'Hii' in rcvd_msg or 'hii' in rcvd_msg or 'update' in rcvd_msg or 'Update' in rcvd_msg:
-		text = f'Hey, I am Jobqo 👋, \n\n Please choose a profile you interested in 👇 \n *A*. Software Developer\n *B*. Data Engineer/Data Analyst \n *C*. Business Analyst'
+		text = f"Hey, I'm Jobqo 👋,\n\n Please choose a job profile you interested in 👇 \n *A*. Software Developer\n *B*. Data Engineer \n *C*. Business Analyst"
 		resp.message(text)
 		responded = True
 
 	if rcvd_msg == 'A' or rcvd_msg == 'a':
 		recipes = search_recipe("Software")
 		message = convert_result_to_message(recipes)
+		resp.message("Showing jobs for software engineering roles:")
 		for msg in message:
 			resp.message(msg)
 			print(msg)
@@ -31,6 +32,7 @@ def reply_with_recipe_info():
 	if rcvd_msg == 'B' or rcvd_msg == 'b':
 		recipes = search_recipe("Data")
 		message = convert_result_to_message(recipes)
+		resp.message("Showing jobs for Data engineering roles:")
 		for msg in message:
 			resp.message(msg)
 			print(msg)
@@ -39,6 +41,7 @@ def reply_with_recipe_info():
 	if rcvd_msg == 'C' or rcvd_msg == 'c':
 		recipes = search_recipe("Business")
 		message = convert_result_to_message(recipes)
+		resp.message("Showing jobs for Business Development roles:")
 		for msg in message:
 			resp.message(msg)
 			print(msg)
